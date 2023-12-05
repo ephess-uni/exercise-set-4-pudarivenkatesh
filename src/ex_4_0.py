@@ -10,10 +10,14 @@ FILENAME = get_data_file_path('messages.log')
 
 
 def get_shutdown_events(logfile):
-    """
-    Your docstring here.  Replace the pass keyword below with your implementation
-    """
-    pass
+    """ Parse log file for shutdown events """
+    with open(logfile) as f:
+        shutdowns = []
+        for i in f:
+            if "Shutdown initiated" in i:
+                shutdowns.append(i)
+    return shutdowns
+            
 
 
 # >>>> The code below will call your function and print the results
