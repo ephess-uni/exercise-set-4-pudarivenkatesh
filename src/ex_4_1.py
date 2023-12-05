@@ -18,7 +18,7 @@ def num_shutdowns(logfile):
     calculates the number of shutdown events in the given log file
     """
     shutdowns = get_shutdown_events(logfile)
-    retuen len(shutdowns)
+    return len(shutdowns)
 
 
 # >>>> The code below will call your function and print the results
